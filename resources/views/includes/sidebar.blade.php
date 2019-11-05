@@ -31,15 +31,15 @@
     </div>    <div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Main</li>
+                <li class="app-sidebar__heading">Dashboard</li>
                 <li>
-                    <a href="index.html" class="mm-active">
+                    <a href="{{ route('home') }}" class="{{ (\Request::route()->getName() == 'home') ? 'mm-active' : '' }}">
                         <i class="metismenu-icon pe-7s-rocket"></i>
                         Dashboard
                     </a>
                 </li>
-                <li class="app-sidebar__heading">Menus</li>
-                    <li>
+                <li class="app-sidebar__heading">Master Data</li>
+                    {{-- <li>
                         <a href="tables-regular.html">
                             <i class="metismenu-icon pe-7s-id"></i>
                             Jabatan
@@ -56,7 +56,7 @@
                             <i class="metismenu-icon pe-7s-portfolio"></i>
                             Struktur Perusahaan
                         </a>
-                    </li>
+                    </li> --}}
             </ul>
         </div>
     </div>
